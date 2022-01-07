@@ -62,9 +62,8 @@ public class SeleniumChromeDriverDL implements SeleniumDriverDL {
                 break;
             }
         }
-        if (versionMatch == null) {
+        if (versionMatch == null)
             throw new Exception("your chrome is old, update to the latest version.");
-        }
         String pathDownload = String.format(URL_DOWNLOAD_CHROME_DRIVER, versionMatch, osType);
         File file = new File(path + "/chromedriver_" + versionMatch + "_" + osType + ".zip");
         try {
@@ -72,9 +71,8 @@ public class SeleniumChromeDriverDL implements SeleniumDriverDL {
         } catch (Exception e) {
             throw new Exception("download driver failure, check osType.");
         }
-        if (!Utils.unzip(file.getAbsolutePath(), path)) {
+        if (!Utils.unzip(file.getAbsolutePath(), path))
             throw new Exception("unzip failure, maybe download error.");
-        }
         file.delete();
     }
 }
