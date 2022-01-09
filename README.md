@@ -1,7 +1,6 @@
 # SeleniumDriverDL library
 
-SeleniumDriverDL là một thư viện hô trợ tự động tải selenium driver phù hợp với phiên bản trình duyệt trên máy tính của
-bạn.
+[SeleniumDriverDL](https://github.com/PhamHuyThien/driver-dl) là một thư viện hô trợ tự động tải [Selenium Driver](https://www.selenium.dev/documentation/webdriver/) phù hợp với phiên bản trình duyệt của bạn.
 
 ## Cài đặt
 
@@ -19,12 +18,12 @@ bạn.
 
 Jar SeleniumDriverDL có sẵn trong [releases github](https://github.com/PhamHuyThien/driver-dl/releases).
 
-## Hướng dãn sử dụng
+## Hướng dẫn sử dụng
 
 ```java
 //Khởi tạo
 // Nếu sử dụng Edge có thể sử dụng new SeleniumEdgeDriverDL()
-SeleniumDriverDL seleniumChromeDriverDL=new SeleniumChromeDriverDL();
+SeleniumDriverDL seleniumChromeDriverDL = new SeleniumChromeDriverDL();
 //có thể chọn phiên bản tải về (mặc định WINDOW_32)
 seleniumChromeDriverDL.setOsType(OsType.OS_WINDOW_32);
 //có thể chọn thư mục lưu driver(mặc định là thư mục chứa code)
@@ -32,6 +31,12 @@ seleniumChromeDriverDL.setPathSave("C:\\download");
 seleniumEdgeDriverDL.init();
 seleniumEdgeDriverDL.download();
 ```
+
+## Ví dụ
+[Nhấn vào đây](https://github.com/PhamHuyThien/driver-dl/blob/master/src/main/java/com/thiendz/lib/driverdl/example/SeleniumDownloadExam.java) để xem ví dụ.
+
+## Lịch sử cập nhật
+[Nhấn vào đây](https://github.com/PhamHuyThien/driver-dl/blob/master/change-log.md) để xem lịch sử cập nhật.
 
 ## Cộng đồng
 
