@@ -69,9 +69,9 @@ public class SeleniumEdgeDriverDL implements SeleniumDriverDL {
         } catch (Exception e) {
             throw new Exception("download driver failure, check osType.");
         }
-        if (!Utils.unzip(file.getAbsolutePath(), path)) {
+        if (!Utils.unzip(file.getAbsolutePath(), path))
             throw new Exception("unzip failure, maybe download error.");
-        }
-        file.delete();
+        if (!file.delete())
+            throw new Exception("delete file zip error.");
     }
 }

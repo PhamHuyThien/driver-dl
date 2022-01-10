@@ -10,7 +10,7 @@
 <dependency>
     <groupId>com.thiendz.lib</groupId>
     <artifactId>driver-dl</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
@@ -22,7 +22,7 @@ Jar SeleniumDriverDL có sẵn trong [releases github](https://github.com/PhamHu
 
 ```java
 //Khởi tạo
-// Nếu sử dụng Edge có thể sử dụng new SeleniumEdgeDriverDL()
+// Nếu sử dụng Edge có thể sử dụng new SeleniumEdgeDriverDL() hoặc SeleniumFirefoxDriverDL()
 SeleniumDriverDL seleniumChromeDriverDL = new SeleniumChromeDriverDL();
 //có thể chọn phiên bản tải về (mặc định WINDOW_32)
 seleniumChromeDriverDL.setOsType(OsType.OS_WINDOW_32);

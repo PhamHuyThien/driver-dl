@@ -73,6 +73,7 @@ public class SeleniumChromeDriverDL implements SeleniumDriverDL {
         }
         if (!Utils.unzip(file.getAbsolutePath(), path))
             throw new Exception("unzip failure, maybe download error.");
-        file.delete();
+        if (!file.delete())
+            throw new Exception("delete file zip error.");
     }
 }
