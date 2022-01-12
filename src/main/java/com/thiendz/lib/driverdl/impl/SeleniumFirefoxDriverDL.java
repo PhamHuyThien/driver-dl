@@ -63,7 +63,7 @@ public class SeleniumFirefoxDriverDL implements SeleniumDriverDL {
         try {
             RequestUtils.download(file, pathDownload);
         } catch (Exception e) {
-            throw new Exception("download driver failure, check osType.");
+            throw new Exception(e.toString());
         }
         if (!Utils.unzip(file.getAbsolutePath(), path))
             throw new Exception("unzip failure, maybe download error.");

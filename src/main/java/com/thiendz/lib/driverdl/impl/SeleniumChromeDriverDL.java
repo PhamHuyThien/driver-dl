@@ -66,10 +66,11 @@ public class SeleniumChromeDriverDL implements SeleniumDriverDL {
             throw new Exception("your chrome is old, update to the latest version.");
         String pathDownload = String.format(URL_DOWNLOAD_CHROME_DRIVER, versionMatch, osType);
         File file = new File(path + "/chromedriver_" + versionMatch + "_" + osType + ".zip");
+        System.out.println(pathDownload);
         try {
             RequestUtils.download(file, pathDownload);
         } catch (Exception e) {
-            throw new Exception("download driver failure, check osType.");
+            throw new Exception(e.toString());
         }
         if (!Utils.unzip(file.getAbsolutePath(), path))
             throw new Exception("unzip failure, maybe download error.");
