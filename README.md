@@ -23,13 +23,13 @@ Jar SeleniumDriverDL có sẵn trong [releases github](https://github.com/PhamHu
 ```java
 //Khởi tạo
 // Nếu sử dụng Edge có thể sử dụng new SeleniumEdgeDriverDL() hoặc SeleniumFirefoxDriverDL()
-SeleniumDriverDL seleniumChromeDriverDL = new SeleniumChromeDriverDL();
+SeleniumDriverDL seleniumDriverDL = new SeleniumChromeDriverDL();
 //có thể chọn phiên bản tải về (mặc định WINDOW_32)
-seleniumChromeDriverDL.setOsType(OsType.OS_WINDOW_32);
+seleniumDriverDL.setOsType(OsType.OS_WINDOW_32);
 //có thể chọn thư mục lưu driver(mặc định là thư mục chứa code)
-seleniumChromeDriverDL.setPathSave("C:\\download");
-seleniumEdgeDriverDL.init();
-seleniumEdgeDriverDL.download();
+seleniumDriverDL.setPathSave("C:\\download");
+seleniumDriverDL.init();
+seleniumDriverDL.download();
 ```
 
 ## Ví dụ
